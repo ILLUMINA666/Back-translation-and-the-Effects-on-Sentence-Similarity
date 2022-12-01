@@ -1,10 +1,7 @@
 # multilingual-sentence-embedding
 
 ## Introduction
-- Motivation
-- What other have done + What models have they used: A short Literature Review (About 1-2 paragraphs)
-- Summarize your idea
-- Summarize your result
+Neural Machine Translation Models are widely used in the present day to connect the world together by breaking the language barriers. The access to information becomes as easy as ever with these pieces of technology. Despite the high performances of the current translation models, there are still various aspects of the model that can be improved and are waiting to be explored. With this knowledge, we decided to perform an experiment on the best method to get the most similar sentences when doing translation tasks. We used various methods of back-translation and compared whether there are potential candidates that can outperform the ‘baseline’ similarities of the original pair we achieved from parallel corpus. The test is performed on ten thousand English-Thai sentence pairs fetched from the English-Thai Machine Translation Dataset provided by VISTEC. We expected some degree of noise during the back-translation process (Khayrallah & Koehn, 2018) so the final result that we found out is quite the contrary of what we hypothesized in the first place. In the end, every back-translated sentences whether they are English-Translated English from Thai or Thai-Translated Thai from English outperforms the original English-Thai sentence pairs.
 
 ## Approach/Methodology/Model
 Our work consists of two important steps; translation and evaluation. The process starts with translation, where we translate selected sentences from the corpus. If English sentences are used as an input, the outputs of the translation are Thai sentences, vice versa. The translation methods that we selected are neural machine translation models, namely,

@@ -65,11 +65,22 @@ The dataset was paraphrased by human, using source data from Prachatai News site
 |     |SCB     | en-th | th-th|0.757|
 |     |
 
-*Due to accident, the result of MBERT, th-th SCB and google was not yet finished. If it's has \* sign in the table means that it's was only 100 sample evaluation.
+*Due to accident, the result of MBERT, th-th SCB and google was not yet finished. If it's has '\*' sign in the table means that it's was only 100 sample evaluation.  
 
 As we can see, the base-line average cosine similarity scores was the lowest compared to the translated one. And the cosine similarity of the english-english embedding pairs seems to have the highest score, followed by the thai-thai sentences embedding pairs score.
 
-//เรื่องว่ามี bias เรื่องภาษาเดียวกัน ค่า  similarity ของ embedding สูงกว่า
+//เรื่องว่ามี bias เรื่องภาษาเดียวกัน ค่า  similarity ของ embedding สูงกว่า 
+### *Test on Parapharsed dataset*
+|Model |Thai-Thai(Original)|Thai-Eng(G)|Eng(G)-Eng(G) | 
+|:---:|:---:|:---:|:---:|
+|SBERT|0.907|0.577|0.760|
+|WangChanBERTa|0.858|0.066|0.747|
+|MBERT|0.892|0.666|0.908|
+
+
+
+
+
 ## Conclusion
 - What did we do?
 - What task?

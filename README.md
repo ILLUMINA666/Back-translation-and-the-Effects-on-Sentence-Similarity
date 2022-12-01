@@ -7,11 +7,15 @@
 - Summarize your result
 
 ## Approach/Methodology/Model
-- Input is...
-- Output is...
-- Model description
-- Equation as necessary
-- Give an thorough explaination of the entire process
+Our work consists of two important steps; translation and evaluation. The process starts with translation, where we translate selected sentences from the corpus. If English sentences are used as an input, the outputs of the translation are Thai sentences, vice versa. The translation methods that we selected are neural machine translation models, namely,
+- Helsinki-NLP’s OPUS MT
+- VISTEC’s English-Thai Machine Translation Model
+- Google’s Google Translate.
+
+Next, for the evaluation section, we compare the sentence similarity of sentence pairs to find the pair with the best similarity score. The inputs are the original English-Thai pair as the baseline, English-Translated English from Thai, and Thai-Translated Thai from English, while the outputs are the similarity score we get from each pair. Then we compare the similarity score between each translation model and the baseline to determine whether the translated counterpart performs better or not. The following are the evaluation methods we used:
+- UKPLab’s sentence-transformers (SBERT)
+- FreddeFrallan’s Multilingual-CLIP (MBERT)
+- VISTEC’s WangchanBERTa
 
 ## Dataset
 ### *data*

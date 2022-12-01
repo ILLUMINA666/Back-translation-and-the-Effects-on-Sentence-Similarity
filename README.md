@@ -86,9 +86,5 @@ However, It's noteworthy that MBERT ,*Multilingual*-BERT, might prefer english l
 
 
 ## Conclusion
-- What did we do?
-- What task?
-- Summary of result
-- Literally re-phrasing your work
-
+The back-translated sentences when compared with the original sentence in the same language will always outperform the original language pair in term of sentence similarity. The result is quite surprising since we expected that the back-translated sentences will be affected by noise during the translation but the in the end it is the opposite of what we initially hypothesized. However, we still don't know whether the evaluation models have bias on when comparing the same language sentences or not so this can be conducted in future studies.
 

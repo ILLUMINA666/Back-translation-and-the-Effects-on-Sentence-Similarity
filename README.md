@@ -43,11 +43,11 @@ The dataset was paraphrased by human, using source data from Prachatai News site
 ## Experiment Setup
 - Which pre-trained model? How did you pre-train embeddings?
 - How long?
-- Hyperparameter tuning? Dropout? How many epochs?
+- Hyperparameter tuning? Dropout? How many epochs?  
+<u>คิดว่าเหมือน methodology. เลยไม่ทราบว่าต้องใส่อะไรค่ะ</u>
 
 
 ## Results
-- How did it go? + Interpret results (which one is the best with explaination; read the table to reinforce the result)
 
 |Model|Translator|Translate|Compare|Average Cosine|
 |:---:|   :---:  |  :---:  |  :---: |:---:      |
@@ -71,9 +71,10 @@ The dataset was paraphrased by human, using source data from Prachatai News site
 
 *Due to accident, the result of MBERT, th-th SCB and google was not yet finished. If it's has '\*' sign in the table means that it's was only 100 sample evaluation.  
 
-As we can see, the base-line average cosine similarity scores was the lowest compared to the translated one. And the cosine similarity of the english-english embedding pairs seems to have the highest score, followed by the thai-thai sentences embedding pairs score.
+As we can see, the base-line average cosine similarity scores was the lowest compared to the translated one. And the cosine similarity of the english-english embedding pairs seems to have the highest score, followed by the thai-thai sentences embedding pairs score.  
 
-//เรื่องว่ามี bias เรื่องภาษาเดียวกัน ค่า  similarity ของ embedding สูงกว่า 
+
+Thus, we can see that the cosine similarity of the sentences are having the influences of the language, If the language are the same, the more of the similarity its have. Eventhough, the sentences may have noise from the translation process, the influences of the same language has out perform the noise.
 ### *Test on Parapharsed dataset*
 |Model |Thai-Thai(Original)|Thai-Eng(G)|Eng(G)-Eng(G) | 
 |:---:|:---:|:---:|:---:|
@@ -81,8 +82,10 @@ As we can see, the base-line average cosine similarity scores was the lowest com
 |WangChanBERTa|0.858|0.066|0.747|
 |MBERT|0.892|0.666|0.908|
 
+*G* = Using Google translate as a translation tool.  
+After we have test on the paraphrased dataset, most of the result was accordingly to our finding, the same langauge embedding (Thai-Thai, Eng-Eng) are having more cosine similarity than the cross-language embedding.(Thai-Eng)
 
-
+However, It's noteworthy that MBERT ,*Multilingual*-BERT, might prefer english languauge more than other languages as the English-English translated acquired more similarity than Thai-Thai (the original dataset).  
 
 
 ## Conclusion
@@ -90,3 +93,5 @@ As we can see, the base-line average cosine similarity scores was the lowest com
 - What task?
 - Summary of result
 - Literally re-phrasing your work
+
+

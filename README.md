@@ -66,7 +66,7 @@ The dataset was paraphrased by human, using source data from Prachatai News site
 |     |SCB     | en-th | th-th|0.757|
 |     |
 
-*Due to accident, the result of MBERT, th-th SCB and google was not yet finished. If it's has '\*' sign in the table means that it's was only 100 sample evaluation.  
+*Due to an accident, the result of MBERT, th-th SCB and google is not yet finished. '\*' sign means that it's was only 100 samples evaluation.  
 
 As we can see, the base-line average cosine similarity scores was the lowest compared to the translated one. And the cosine similarity of the english-english embedding pairs seems to have the highest score, followed by the thai-thai sentences embedding pairs score.  
 

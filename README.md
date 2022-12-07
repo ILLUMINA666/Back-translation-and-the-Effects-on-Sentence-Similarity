@@ -48,23 +48,24 @@ The dataset was paraphrased by human, using source data from Prachatai News site
 
 |Model|Translator|Translate|Compare|Average Cosine|
 |:---:|   :---:  |  :---:  |  :---: |:---:      |
-|SBERT|base-line| -| th-en|0.591|
-|     | SCB | th-en| en-en | 0.803|
-|     |Helsinki |  th-en|    en-en|0.715|
-|     |google|th-en|en-en|0.701|
-|     |google|en-th|th-th|0.697|
-|WangchanBERTa| base-line|
-|      |SCB | th-en| en-en | 0.778|
-|     |Helsinki |  th-en|    en-en| 0.676|
-|     |Google   |
-|     |SCB| en_th|**th-th|0.668|
-|     |Helsinki| en-th|th-th|??|
-|     |Google   |
-|**MBERT| base-line| -| th-en|0.651|
-|| SCB| th-en| en-en |0.842|
-|     |Helsinki| th-en|en-en|0.787|
-|     |SCB     | en-th | th-th|0.757|
-|     |
+|SBERT|base-line| -     | th-en |0.641  |
+|     | SCB     |th-en  | en-en |**0.803**|
+|     |Helsinki |th-en  | en-en |0.715  |
+|     |google   |th-en  | en-en |0.701  |
+|     | SCB     |en-th  | th-th |*0.783*  |
+|     |google   |en-th  |th-th  |0.697  |
+|WangchanBERTa| base-line|None|None|None|
+|     |SCB      | th-en | en-en |**0.778**|
+|     |Helsinki |  th-en|  en-en| 0.676 |
+|     |Google   |  th-en|  en-en| 0.664 |
+|     |SCB      | en-th |th-th  |0.660  |
+|     |Google   |en-th  |th-th  |0.513  |
+|MBERT| base-line| -    | th-en |0.641  |
+|     | SCB     | th-en | en-en |**0.864**|
+|     |Helsinki | th-en |en-en  |0.798  |
+|     |Google   |  th-en|  en-en| 0.794 |
+|     |SCB      | en-th | th-th |0.741  |
+|     |Google   |en-th  |th-th  |0.720  |
 
 *Due to an accident, the result of MBERT, th-th SCB and google is not yet finished. '\*' sign means that it's was only 100 samples evaluation.  
 
@@ -75,11 +76,12 @@ Thus, we can see that the cosine similarity of the sentences are having the infl
 ### *Test on Parapharsed dataset*
 |Model |Thai-Thai(Original)|Thai-Eng(G)|Eng(G)-Eng(G) | 
 |:---:|:---:|:---:|:---:|
-|SBERT|0.907|0.577|0.760|
+|SBERT|0.907|0.591|0.760|
 |WangChanBERTa|0.858|0.066|0.747|
-|MBERT|0.892|0.666|0.908|
+|MBERT|0.892|0.674|0.908|
 
-*G* = Using Google translate as a translation tool.  
+*G* = Using Google translate as a translation tool. As google translate provided an unbias translation and both English to Thai and Thai to English translation.
+   
 After we have test on the paraphrased dataset, most of the result was accordingly to our finding, the same langauge embedding (Thai-Thai, Eng-Eng) are having more cosine similarity than the cross-language embedding.(Thai-Eng)
 
 However, It's noteworthy that MBERT ,*Multilingual*-BERT, might prefer english languauge more than other languages as the English-English translated acquired more similarity than Thai-Thai (the original dataset).  

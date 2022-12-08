@@ -15,7 +15,7 @@ Next, for the evaluation section, we compare the sentence similarity of sentence
 - VISTEC’s WangchanBERTa
 
 ## Dataset
-### *data*
+### Data
 We use the English-Thai Machine Translation Dataset provided by VISTEC Thailand Artificial Intelligence Research Institute. We choose 10,000 random pairs from the dataset from the total of 356,063 pairs that are translated by professional translators.
 
 |Corpus| Sub-dataset | number of segment pairs | Selected|
@@ -23,7 +23,7 @@ We use the English-Thai Machine Translation Dataset provided by VISTEC Thailand 
  English-Thai Machine Translation Dataset| Taskmaster-1 | 222,733| 10,000|
 || Product Reviews Translation | 133,330||
 
-### *evaluation set*
+### Evaluation Set
 For this step, the dataset is paraphrased by humans, using source data from Prachatai News Sites (Prachatai-67k dataset). After using the Sentence Tokenizer provided by PyThaiNLP, we choose the sample of each article, and hand-select them to be our samples, which results in 100 sentences from 100 different articles.
 
 |Corpus             |Number of articles  | Selected     |
@@ -32,19 +32,13 @@ For this step, the dataset is paraphrased by humans, using source data from Prac
 
 
 <u>Example</u>  
-- Original data   &nbsp; &nbsp; &nbsp; : &nbsp; เมื่อบริษัทกัลฟ์ ฯ นำเรือออกสำรวจปลาวาฬ แต่ชาวบ้านให้นำเรือมาตรวจสอบก่อน  
-- Paraphrased data :&nbsp; ชาวบ้านให้นำเรือมาตรวจสอบก่อน ก่อนบริษัทกัลฟ์ ฯ นำเรือออกสำรวจวาฬ
+- Original data : เมื่อบรษัทกัลฟ์ ฯ นำเรือออกสำรวจปลาวาฬ แต่ชาวบ้านให้นำเรือมาตรวจสอบก่อน  
+- Paraphrased data : ชาวบ้านให้นำเรือมาตรวจสอบก่อน ก่อนบริษัทกัลฟ์ ฯ นำเรือออกสำรวจวาฬ
   
 
 
 ## Experiment Setup
-
-
-- Which pre-trained model? How did you pre-train embeddings?
-- How long?
-- Hyperparameter tuning? Dropout? How many epochs?  
-<u>คิดว่าเหมือน methodology. เลยไม่ทราบว่าต้องใส่อะไรค่ะ</u>
-
+Firstly, we choose 10,000 sentence pairs from the dataset by randomly choosing the sentences from the dataset and store them in CSV. Next, we translated the sampled data with the methods we stated above and store them in CSV. Then, we run the sentences we got from the translation through a evaluation model that is mentioned earlier, which once again we store the calculated cosine similarity score in CSV. Finally, we compare the cosine similarity score we got from various methods of translation and find the trends from the results.
 
 ## Results
 

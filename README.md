@@ -68,7 +68,7 @@ As we can see, the average cosine similarity score of baseline is the lowest of 
 Thus, we can see that the cosine similarity of the sentences have the bias by being the same language. If the language of both pairs are the same, they will be more likely to have higher cosine similarity score. Even though the sentences may have noise from the translation process, the influence of the same language has outperformed the noise.
 
 ### *Test on Parapharsed dataset*
-|Model |Thai-Thai (Original)|Thai-Eng (G)|Eng (G) - Eng (G) | 
+|Model |Thai-Thai (Original)|Thai-English (G)|English (G) - English (G) | 
 |:---:|:---:|:---:|:---:|
 |SBERT|0.907|0.591|0.760|
 |WangChanBERTa|0.858|0.066|0.747|
